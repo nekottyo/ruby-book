@@ -23,4 +23,4 @@ jobs:
           command: bundle exec rake test
           when: always
       - store_test_results:
-          path: coveradge
+          path: coverage
