@@ -1,5 +1,4 @@
-require 'coco'
-require 'minitest/autorun'
+require_relative 'helper/test_helper.rb'
 require_relative '../lib/4_rgb.rb'
 
 class RgbTest < Minitest::Test

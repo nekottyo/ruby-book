@@ -1,5 +1,4 @@
-require 'coco'
-require 'minitest/autorun'
+require_relative 'helper/test_helper.rb'
 require_relative '../lib/6_convert_hash_syntax.rb'
 
 class ConvertHashSyntaxTest < MiniTest::Test

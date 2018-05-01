@@ -1,5 +1,4 @@
-require 'coco'
-require 'minitest/autorun'
+require_relative 'helper/test_helper.rb'
 require './lib/2_fizz_buzz'
 
 class FizzBuzzTest < Minitest::Test

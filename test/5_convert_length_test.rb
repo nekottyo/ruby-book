@@ -1,5 +1,4 @@
-require 'coco'
-require 'minitest/autorun'
+require_relative 'helper/test_helper.rb'
 require_relative '../lib/5_convert_length.rb'
 
 class ConvertLengthTest < MiniTest::Test
