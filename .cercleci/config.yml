@@ -29,5 +29,3 @@ jobs:
           path: test/reports
       - store_artifacts:
           path: coverage
-
-

@@ -2,9 +2,9 @@
 
 source "https://rubygems.org"
 
-
 gem 'bundler'
-gem 'coco'
-gem 'rake'
 gem 'minitest'
 gem 'minitest-ci'
+gem 'rake'
+gem 'simplecov', require: false, group: 'test'
+gem 'codeclimate-test-reporter', require: false, group: 'test'
