@@ -3,9 +3,7 @@
 # Check https://circleci.com/docs/2.0/language-ruby/ for more details
 #
 version: 2
-machine:
-  environment:
-    TESTOPTS: "--ci-dir=$CIRCLE_TEST_REPORTS/reports"
+
 jobs:
   build:
     docker:
@@ -21,10 +19,14 @@ jobs:
 
     steps:
       - checkout
+      - run: curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+      - run: chmod +x ./cc-test-reporter
       - run: bundle check || bundle install
+      - run: ./cc-test-reporter before-build
       - run:
           command: bundle exec rake test
           when: always
+      - run: ./cc-test-reporter after-build --coverage-input-type simplecov --exit-code $?
       - store_test_results:
           path: test/reports
       - store_artifacts:

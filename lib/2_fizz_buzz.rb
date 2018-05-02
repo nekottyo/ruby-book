@@ -10,7 +10,3 @@ def fizz_buzz(number)
     number.to_s
   end
 end
-
-1.upto(15) do |n|
-  puts fizz_buzz(n)
-end
