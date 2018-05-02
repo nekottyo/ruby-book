@@ -26,6 +26,9 @@ jobs:
       - run:
           command: bundle exec rake test
           when: always
+      - run:
+          command: bundle exec rake rubycritic
+          when: always
       - run: ./cc-test-reporter after-build --coverage-input-type simplecov --exit-code $?
       - store_test_results:
           path: test/reports
