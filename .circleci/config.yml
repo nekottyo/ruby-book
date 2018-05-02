@@ -34,5 +34,5 @@ jobs:
           path: test/reports
       - store_artifacts:
           path: coverage
-      - store_artifacts
+      - store_artifacts:
           path: tmp/rubycritic
