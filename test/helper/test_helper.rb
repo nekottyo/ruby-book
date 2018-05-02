@@ -1,6 +1,7 @@
 require 'simplecov'
 require 'minitest/autorun'
 require 'minitest/ci'
+require "codeclimate-test-reporter"
 
 if ENV["CIRCLECI"]
   Minitest::Ci.report_dir = "#{ENV["CIRCLE_TEST_REPORTS"]}/reports"
