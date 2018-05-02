@@ -5,7 +5,6 @@ require 'rubycritic/rake_task'
 Rake::TestTask.new do |test|
   test.libs << 'test'
   test.test_files = Dir[ 'test/**/*_test.rb' ]
-  test.verbose = true
 end
 desc "Run test"
 
@@ -22,7 +21,6 @@ RubyCritic::RakeTask.new do |task|
   task.options = '--no-browser'
 
   # Defaults to false
-  task.verbose = true
 end
 
 
